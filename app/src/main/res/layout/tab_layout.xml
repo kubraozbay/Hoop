@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/colorPrimary">
+
+    <ImageButton
+            android:id="@+id/btnCamera"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:minHeight="50dp"
+            android:src="@drawable/camera"
+            android:background="@android:color/transparent"/>
+    <Button
+            android:id="@+id/btnChats"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:minHeight="50dp"
+            android:text="CHATS"
+            android:background="@android:color/transparent"
+            android:textColor="@android:color/white"/>
+    <Button
+            android:id="@+id/btnStatus"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:minHeight="50dp"
+            android:text="STATUS"
+            android:background="@android:color/transparent"
+            android:textColor="@android:color/white"/>
+    <Button
+            android:id="@+id/btnCall"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:minHeight="50dp"
+            android:text="CALLS"
+            android:background="@android:color/transparent"
+            android:textColor="@android:color/white"/>
+</LinearLayout>

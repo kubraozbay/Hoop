@@ -2,47 +2,24 @@
 <LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".Activity.MainActivity"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent" android:layout_height="match_parent"
+        tools:context=".activity.MainActivity"
         android:orientation="vertical">
 
-    <LinearLayout
+    <androidx.viewpager.widget.ViewPager
+            android:id="@+id/vpMain"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-        <ImageButton
-                android:id="@+id/btnCamera"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="50dp"
-                android:src="@drawable/camera"/>
-        <Button
-                android:id="@+id/btnChats"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="50dp"
-                android:text="CHATS"/>
-        <Button
-                android:id="@+id/btnStatus"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="50dp"
-                android:text="STATUS"/>
-        <Button
-                android:id="@+id/btnCall"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="50dp"
-                android:text="CALLS"/>
-    </LinearLayout>
-
-    <FrameLayout
-            android:id="@+id/fl_container"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-    </FrameLayout>
-
+            android:layout_height="match_parent"
+            android:layout_gravity="center">
+        <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:background="@color/colorPrimary"
+                app:tabTextColor="@android:color/white"
+                app:tabIndicatorColor="@android:color/white"
+                app:tabIconTint="@android:color/white"/>
+    </androidx.viewpager.widget.ViewPager>
 </LinearLayout>
