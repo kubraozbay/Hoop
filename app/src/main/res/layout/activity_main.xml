@@ -22,4 +22,6 @@
                 app:tabIndicatorColor="@android:color/white"
                 app:tabIconTint="@android:color/white"/>
     </androidx.viewpager.widget.ViewPager>
+
+
 </LinearLayout>
