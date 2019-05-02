@@ -9,16 +9,32 @@ import io.androidedu.hoop.entity.ChatEntity
 
 //viewpager daha yüklü viewlwer için kullanılır.recylerview daha  küçük veriler için.
 
-class ChatListAdapter(val chatList: List<ChatEntity>,
-                      val onItemClickListener: (chatEntity: ChatEntity) -> Unit) :
-    RecyclerView.Adapter<ChatListViewHolder>() {
+class ChatListAdapter(
+    var chatList: List<ChatEntity>?=null,
+    val onItemClickListener: (chatEntity: ChatEntity) -> Unit,
+    val onLongClickListener: (chatEntity: ChatEntity) -> Unit
+) : RecyclerView.Adapter<ChatListViewHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ChatListViewHolder = ChatListViewHolder(parent)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int)
+            : ChatListViewHolder = ChatListViewHolder(parent)
 
-    override fun getItemCount(): Int = chatList.size
+    override fun getItemCount(): Int {
+        chatList?.let {
+            return it.size
+        }
+        return 0
+    }
 
     override fun onBindViewHolder(holder: ChatListViewHolder, position: Int) {
 
-        holder.bind(chatList[position], onItemClickListener)
+        chatList?.let {
+            holder.bind(it[position],onItemClickListener,onLongClickListener)
+        }
+    }
+
+
+    fun setNewItem(chatList: List<ChatEntity>){
+        this.chatList=chatList
+        notifyDataSetChanged()
     }
 }

@@ -33,6 +33,7 @@ class MainActivity : AppCompatActivity() {
         adapter.addFragment(statusFragment, "STATUS")
         adapter.addFragment(callsFragment, "CALLS")
 
+
         vpMain!!.adapter = adapter
 
         tabLayout.setupWithViewPager(vpMain)

@@ -9,7 +9,7 @@
         android:foreground="?selectableItemBackground">
 
     <ImageView
-            android:id="@+id/imgvChatProfile"
+            android:id="@+id/imgvStatusProfile"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/camera"
@@ -23,24 +23,17 @@
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp">
         <TextView
-                android:id="@+id/txtChatUserName"
+                android:id="@+id/txtStatusUserName"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 tools:text="isim-soyisim"
                 android:textColor="@android:color/black"/>
         <TextView
-                android:id="@+id/txtChatUserMessage"
+                android:id="@+id/txtStatusDate"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 tools:text="selam"/>
 
     </LinearLayout>
 
-    <TextView
-            android:id="@+id/txtChatDate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            tools:text="13:15"
-            android:layout_gravity="center"
-            android:layout_marginRight="10dp"/>
 </LinearLayout>

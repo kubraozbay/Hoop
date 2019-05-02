@@ -1,5 +1,6 @@
 package io.androidedu.hoop.dao
 
+import androidx.lifecycle.LiveData
 import androidx.room.*
 import io.androidedu.hoop.entity.ChatEntity
 
@@ -19,5 +20,5 @@ interface ChatDao {
     fun findSingleItem(id: Int): ChatEntity
 
     @Query("SELECT *FROM chat_table")
-    fun getAllList(): List<ChatEntity>
+    fun getAllList(): LiveData<List<ChatEntity>>
 }
